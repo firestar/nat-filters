@@ -1,0 +1,11 @@
+[Unit]
+Description=ethtool script
+After=libvirtd.service
+Requires=libvirtd.service
+
+[Service]
+ExecStart=/root/network_forward.sh
+Type=oneshot
+
+[Install]
+WantedBy=basic.target
